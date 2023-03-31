@@ -4,16 +4,28 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug Rust",
+            "name": "Rust: Debug",
             "cargo": {
                 "args": [
                     "build",
                     "--manifest-path",
                     "${fileDirname}/../Cargo.toml"
+                ]
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Rust: Build for release",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--manifest-path",
+                    "${fileDirname}/../Cargo.toml",
+                    "--release"
                 ]
             }
         }
